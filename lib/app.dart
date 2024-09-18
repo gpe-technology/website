@@ -11,15 +11,17 @@ class App extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield div(classes: 'main', [
-      const MyHeader(),
+      const AppHeader(),
       Router(routes: [
         Route(
             path: '/',
             title: 'Home',
+            name: 'home',
             builder: (context, state) => const Home()),
         Route(
             path: '/about',
             title: 'About',
+            name: 'about',
             builder: (context, state) => const About()),
       ]),
     ]);
