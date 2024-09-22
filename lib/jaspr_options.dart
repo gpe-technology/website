@@ -2,10 +2,11 @@
 // Generated with jaspr_builder
 
 import 'package:jaspr/jaspr.dart';
-import 'package:gpe_website/components/header.dart' as prefix0;
-import 'package:gpe_website/pages/about.dart' as prefix1;
-import 'package:gpe_website/pages/home.dart' as prefix2;
-import 'package:gpe_website/app.dart' as prefix3;
+import 'package:gpe_website/components/footer.dart' as prefix0;
+import 'package:gpe_website/components/header.dart' as prefix1;
+import 'package:gpe_website/pages/about.dart' as prefix2;
+import 'package:gpe_website/pages/home.dart' as prefix3;
+import 'package:gpe_website/app.dart' as prefix4;
 
 /// Default [JasprOptions] for use with your jaspr project.
 ///
@@ -25,14 +26,15 @@ import 'package:gpe_website/app.dart' as prefix3;
 /// ```
 final defaultJasprOptions = JasprOptions(
   clients: {
-    prefix0.AppHeader: ClientTarget<prefix0.AppHeader>('components/header', params: _prefix0AppHeader),
-    prefix1.About: ClientTarget<prefix1.About>('pages/about'),
-    prefix2.Home: ClientTarget<prefix2.Home>('pages/home'),
+    prefix0.Footer: ClientTarget<prefix0.Footer>('components/footer'),
+    prefix1.AppHeader: ClientTarget<prefix1.AppHeader>('components/header', params: _prefix1AppHeader),
+    prefix2.About: ClientTarget<prefix2.About>('pages/about'),
+    prefix3.Home: ClientTarget<prefix3.Home>('pages/home'),
   },
   styles: () => [
-    ...prefix1.About.styles,
-    ...prefix3.App.styles,
+    ...prefix2.About.styles,
+    ...prefix4.App.styles,
   ],
 );
 
-Map<String, dynamic> _prefix0AppHeader(prefix0.AppHeader c) => {'path': c.path};
+Map<String, dynamic> _prefix1AppHeader(prefix1.AppHeader c) => {'path': c.path};

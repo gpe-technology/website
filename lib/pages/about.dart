@@ -1,4 +1,4 @@
-import 'package:gpe_website/components/header.dart';
+import 'package:gpe_website/components/components.dart';
 import 'package:jaspr/jaspr.dart';
 
 @client

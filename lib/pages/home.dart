@@ -1,6 +1,6 @@
-import 'package:gpe_website/components/header.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_router/jaspr_router.dart';
+import 'package:gpe_website/components/components.dart';
 
 @client
 class Home extends StatelessComponent {
@@ -10,15 +10,17 @@ class Home extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield const AppHeader(path: '/');
     yield div(
-        classes:
-            "h-full w-full flex justify-end items-center bg-[url('images/bg-image.png')]",
-        [
-          div(classes: 'grid grid-cols-2 gap-8 m-10', [
-            ...elements.map((element) {
-              return _Item(element: element);
-            })
-          ]),
-        ]);
+      classes:
+          "h-full w-full flex justify-end items-center bg-[url('images/bg-image.png')]",
+      [
+        div(classes: 'grid grid-cols-2 gap-8 m-10', [
+          ...elements.map((element) {
+            return _Item(element: element);
+          })
+        ]),
+      ],
+    );
+    yield Footer();
   }
 }
 
