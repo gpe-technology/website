@@ -7,6 +7,9 @@ module.exports = {
           'primary': '#F7EFE5',
           'secondary': '#674188',
         },
+        backgroundImage: {
+          'home-image':"url('/images/bg-image.png')"
+        }
       },
     },
     plugins: [],

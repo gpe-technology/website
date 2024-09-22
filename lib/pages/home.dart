@@ -9,20 +9,20 @@ class Home extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield const AppHeader(path: '/');
-    yield div(classes: 'h-screen', [
-      div(
-        classes:
-            "h-full w-full flex justify-end items-center bg-[url('images/bg-image.png')]",
-        [
+    yield div(
+      classes:
+          "w-full flex justify-end items-center bg-home-image bg-cover bg-center",
+      [
+        div(classes: 'h-[calc(100vh-64px)] flex items-center', [
           div(classes: 'grid grid-cols-2 gap-8 m-10', [
             ...elements.map((element) {
               return _Item(element: element);
             })
           ]),
-        ],
-      ),
-      Footer(),
-    ]);
+        ]),
+      ],
+    );
+    yield Footer();
   }
 }
 
