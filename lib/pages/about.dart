@@ -7,7 +7,7 @@ class About extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield const AppHeader(path: '/about');
+    yield const AppHeader(path: '/qui-sommes-nous');
     yield section([]);
   }
 
