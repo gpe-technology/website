@@ -31,7 +31,7 @@ class _Item extends StatelessComponent {
       to: element.path,
       child: div(
           classes:
-              'w-36 bg-[#D9D9D9]/75 flex justify-center items-center rounded-sm hover:bg-[#D9D9D9]',
+              'w-36 bg-primary/75 flex justify-center items-center rounded-sm hover:bg-primary',
           [
             h1(classes: 'text-secondary text-lg p-8 font-bold text-center', [
               text(element.title),
