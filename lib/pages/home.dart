@@ -26,8 +26,8 @@ class _Item extends StatelessComponent {
   final String title;
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(classes: 'w-40 bg-[#D9D9D9] flex justify-center items-center ', [
-      h1(classes: 'text-secondary text-xl py-10 px-4 font-black', [
+    yield div(classes: 'w-36 bg-[#D9D9D9] flex justify-center items-center ', [
+      h1(classes: 'text-secondary text-lg py-8 px-4 font-black', [
         text(title),
       ])
     ]);
