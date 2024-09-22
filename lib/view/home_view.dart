@@ -51,7 +51,7 @@ const elements = <Element>[
   Element(title: 'Ingénierie'),
   Element(title: 'Études'),
   Element(title: 'Laboratoire'),
-  Element(title: 'Informatique'),
+  Element(title: 'Informatique', path: '/informatique'),
 ];
 
 class Element {
