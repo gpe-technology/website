@@ -7,16 +7,11 @@ class AppHeader extends StatelessComponent {
   final String path;
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(classes: 'w-full h-16 bg-red-400', [
-      nav(
-          classes:
-              'w-full h-full bg-green-400 flex h-full justify-around items-center',
-          [
-            ol(classes: 'flex w-1/4 h-full', [
-              _Item(title: 'Home', to: '/', isSelected: path == '/'),
-              _Item(title: 'About', to: '/about', isSelected: path == '/about'),
-            ])
-          ])
+    yield nav(classes: 'flex justify-end bg-primary', [
+      ol(classes: 'flex justify-end h-16', [
+        _Item(title: 'Home', to: '/', isSelected: path == '/'),
+        _Item(title: 'About', to: '/about', isSelected: path == '/about'),
+      ])
     ]);
   }
 }
@@ -35,7 +30,7 @@ class _Item extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield li(
       classes:
-          'border-b-4  ${_isSelected ? 'border-indigo-500 ' : 'border-transparent'} hover:text-sky-700 mr-10',
+          'border-b-4  ${_isSelected ? 'border-secondary ' : 'border-transparent'} hover:text-secondary mr-10',
       [
         div(
             classes: 'h-full flex items-center',

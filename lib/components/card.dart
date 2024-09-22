@@ -5,7 +5,7 @@ class Card extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(classes: 'w-[300px] h-[400px] bg-red-400 rounded-lg m-6', [
+    yield div(classes: 'w-[300px] h-[400px] bg-red-400 rounded-lg', [
       text('Card Title'),
     ]);
   }

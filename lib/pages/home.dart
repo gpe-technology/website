@@ -1,4 +1,3 @@
-import 'package:gpe_website/components/card.dart';
 import 'package:gpe_website/components/header.dart';
 import 'package:jaspr/jaspr.dart';
 
@@ -9,8 +8,7 @@ class Home extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield const AppHeader(path: '/');
-    yield div(classes: '', [
-      const Card(),
-    ]);
+    yield div(
+        classes: "h-full w-full bg-[url('assets/images/bg-image.png')]", []);
   }
 }
