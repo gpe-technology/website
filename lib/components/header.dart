@@ -8,7 +8,10 @@ class AppHeader extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield nav(classes: 'flex justify-between items-center bg-primary', [
-      h1(classes: 'ml-8 font-black text-xl', [text('GPE-Technology')]),
+      Link(
+        to: '/',
+        child: h1(classes: 'ml-8 font-black text-xl', [text('GPE-Technology')]),
+      ),
       ol(classes: 'flex justify-end h-16', [
         _Item(title: 'Accueil', to: '/', isSelected: path == '/'),
         _Item(
