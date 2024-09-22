@@ -2,8 +2,8 @@ import 'package:gpe_website/components/components.dart';
 import 'package:jaspr/jaspr.dart';
 
 @client
-class About extends StatelessComponent {
-  const About({super.key});
+class AboutView extends StatelessComponent {
+  const AboutView({super.key});
 
   @override
   Iterable<Component> build(BuildContext context) sync* {

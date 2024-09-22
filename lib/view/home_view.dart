@@ -3,8 +3,8 @@ import 'package:gpe_website/components/components.dart';
 import 'package:jaspr_router/jaspr_router.dart';
 
 @client
-class Home extends StatelessComponent {
-  const Home({super.key});
+class HomeView extends StatelessComponent {
+  const HomeView({super.key});
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
