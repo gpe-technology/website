@@ -10,7 +10,7 @@ class Home extends StatelessComponent {
     yield const AppHeader(path: '/');
     yield div(
         classes:
-            "h-full w-full flex justify-end items-center bg-[url('assets/images/bg-image.png')]",
+            "h-full w-full flex justify-end items-center bg-[url('images/bg-image.png')]",
         [
           div(classes: 'grid grid-cols-2 gap-8 m-10', [
             ...elements.map((e) {
