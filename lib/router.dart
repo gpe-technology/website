@@ -14,4 +14,5 @@ final router = Router(routes: [
     name: 'gpe-about',
     builder: (context, state) => const AboutView(),
   ),
+  // informatique
 ]);

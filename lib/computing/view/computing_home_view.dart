@@ -1,8 +1,8 @@
 import 'package:jaspr/jaspr.dart';
 
 @client
-class InformatiqueHomeView extends StatelessComponent {
-  const InformatiqueHomeView({super.key});
+class ComputingHomeView extends StatelessComponent {
+  const ComputingHomeView({super.key});
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield div([]);
