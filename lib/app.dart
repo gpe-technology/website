@@ -13,13 +13,13 @@ class App extends StatelessComponent {
       Router(routes: [
         Route(
           path: '/',
-          title: 'Home',
+          title: 'Accueil',
           name: 'home',
           builder: (context, state) => const Home(),
         ),
         Route(
-          path: '/about',
-          title: 'About',
+          path: '/qui-sommes-nous',
+          title: 'qui-sommes-nous',
           name: 'about',
           builder: (context, state) => const About(),
         ),

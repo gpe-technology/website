@@ -10,8 +10,11 @@ class AppHeader extends StatelessComponent {
     yield nav(classes: 'flex justify-between items-center bg-primary', [
       h1(classes: 'ml-8 font-black text-xl', [text('GPE-Technology')]),
       ol(classes: 'flex justify-end h-16', [
-        _Item(title: 'Home', to: '/', isSelected: path == '/'),
-        _Item(title: 'About', to: '/about', isSelected: path == '/about'),
+        _Item(title: 'Accueil', to: '/', isSelected: path == '/'),
+        _Item(
+            title: 'Qui sommes-nous ?',
+            to: '/qui-sommes-nous',
+            isSelected: path == '/qui-sommes-nous'),
       ])
     ]);
   }
