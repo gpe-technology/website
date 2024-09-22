@@ -1,4 +1,5 @@
-import 'package:gpe_website/components/info_card.dart';
+import 'package:gpe_website/components/card.dart';
+import 'package:gpe_website/components/header.dart';
 import 'package:jaspr/jaspr.dart';
 
 @client
@@ -7,8 +8,9 @@ class Home extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
+    yield const AppHeader(path: '/');
     yield div(classes: '', [
-      const InfoCard(),
+      const Card(),
     ]);
   }
 }

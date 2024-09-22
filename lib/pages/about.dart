@@ -1,3 +1,4 @@
+import 'package:gpe_website/components/header.dart';
 import 'package:jaspr/jaspr.dart';
 
 @client
@@ -6,6 +7,7 @@ class About extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
+    yield const AppHeader(path: '/about');
     yield section([
       ol([
         li([

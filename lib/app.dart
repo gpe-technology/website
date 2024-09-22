@@ -1,4 +1,3 @@
-import 'package:gpe_website/components/header.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_router/jaspr_router.dart';
 
@@ -11,18 +10,19 @@ class App extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield div(classes: 'main', [
-      const AppHeader(),
       Router(routes: [
         Route(
-            path: '/',
-            title: 'Home',
-            name: 'home',
-            builder: (context, state) => const Home()),
+          path: '/',
+          title: 'Home',
+          name: 'home',
+          builder: (context, state) => const Home(),
+        ),
         Route(
-            path: '/about',
-            title: 'About',
-            name: 'about',
-            builder: (context, state) => const About()),
+          path: '/about',
+          title: 'About',
+          name: 'about',
+          builder: (context, state) => const About(),
+        ),
       ]),
     ]);
   }

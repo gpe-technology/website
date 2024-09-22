@@ -1,7 +1,7 @@
 import 'package:jaspr/jaspr.dart';
 
-class InfoCard extends StatelessComponent {
-  const InfoCard({super.key});
+class Card extends StatelessComponent {
+  const Card({super.key});
 
   @override
   Iterable<Component> build(BuildContext context) sync* {

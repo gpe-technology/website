@@ -25,7 +25,7 @@ import 'package:gpe_website/app.dart' as prefix3;
 /// ```
 final defaultJasprOptions = JasprOptions(
   clients: {
-    prefix0.AppHeader: ClientTarget<prefix0.AppHeader>('components/header'),
+    prefix0.AppHeader: ClientTarget<prefix0.AppHeader>('components/header', params: _prefix0AppHeader),
     prefix1.About: ClientTarget<prefix1.About>('pages/about'),
     prefix2.Home: ClientTarget<prefix2.Home>('pages/home'),
   },
@@ -34,3 +34,5 @@ final defaultJasprOptions = JasprOptions(
     ...prefix3.App.styles,
   ],
 );
+
+Map<String, dynamic> _prefix0AppHeader(prefix0.AppHeader c) => {'path': c.path};
