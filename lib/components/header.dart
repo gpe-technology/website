@@ -13,7 +13,7 @@ class AppHeader extends StatelessComponent {
         _Item(title: 'Accueil', to: '/', isSelected: path == '/'),
         _Item(
             title: 'Qui sommes-nous ?',
-            to: '/qui-sommes-nous',
+            to: '#',
             isSelected: path == '/qui-sommes-nous'),
       ])
     ]);

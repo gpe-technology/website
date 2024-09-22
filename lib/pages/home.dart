@@ -1,5 +1,6 @@
 import 'package:gpe_website/components/header.dart';
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_router/jaspr_router.dart';
 
 @client
 class Home extends StatelessComponent {
@@ -13,8 +14,8 @@ class Home extends StatelessComponent {
             "h-full w-full flex justify-end items-center bg-[url('images/bg-image.png')]",
         [
           div(classes: 'grid grid-cols-2 gap-8 m-10', [
-            ...elements.map((e) {
-              return _Item(title: e.title);
+            ...elements.map((element) {
+              return _Item(element: element);
             })
           ]),
         ]);
@@ -22,29 +23,36 @@ class Home extends StatelessComponent {
 }
 
 class _Item extends StatelessComponent {
-  const _Item({required this.title});
-  final String title;
+  const _Item({required this.element});
+  final Element element;
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(classes: 'w-36 bg-[#D9D9D9] flex justify-center items-center ', [
-      h1(classes: 'text-secondary text-lg p-8 font-bold text-center', [
-        text(title),
-      ])
-    ]);
+    yield Link(
+      to: element.path,
+      child: div(
+          classes:
+              'w-36 bg-[#D9D9D9]/75 flex justify-center items-center rounded-sm hover:bg-[#D9D9D9]',
+          [
+            h1(classes: 'text-secondary text-lg p-8 font-bold text-center', [
+              text(element.title),
+            ]),
+          ]),
+    );
   }
 }
 
-final elements = <Element>[
+const elements = <Element>[
   Element(title: 'Expertise'),
   Element(title: 'Conseils'),
   Element(title: 'Ingénierie'),
-  Element(title: 'Etudes'),
+  Element(title: 'Études'),
   Element(title: 'Laboratoire'),
-  Element(title: 'Technology & informatique'),
+  Element(title: 'Informatique'),
 ];
 
 class Element {
   final String title;
+  final String path;
 
-  Element({required this.title});
+  const Element({required this.title, this.path = '#'});
 }
