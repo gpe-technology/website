@@ -39,7 +39,7 @@ const Map<String, dynamic> homeContentListData = {
         {
           "title": "Backend & Cloud",
           "content":
-              "Mettez vos applications partout où vos utilisateurs les veulent.",
+              "Infrastructure évolutive pour des applications de hautes performances.",
           "items": [
             "Firebase",
             "Google cloud Platform / Aws",

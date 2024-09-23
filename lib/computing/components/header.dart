@@ -1,4 +1,5 @@
 import 'package:gpe_website/computing/components/button_rounded.dart';
+import 'package:gpe_website/router.dart';
 import 'package:jaspr/jaspr.dart';
 
 class Header extends StatelessComponent {
@@ -11,7 +12,7 @@ class Header extends StatelessComponent {
             classes: 'text-white text-2xl sm:text-3xl  font-bold',
             [const Text('GPE-Informatique')]),
         ol(classes: 'h-full flex justify-between items-center', [
-          const ButtonRounded(title: 'Contactez-nous'),
+          ButtonLinkRounded(title: 'Contactez-nous', to: AppPath.contact),
         ])
       ]),
     ]);

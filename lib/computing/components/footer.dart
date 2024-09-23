@@ -1,4 +1,5 @@
 import 'package:gpe_website/computing/components/button_rounded.dart';
+import 'package:gpe_website/router.dart';
 import 'package:jaspr/jaspr.dart';
 
 class Footer extends StatelessComponent {
@@ -11,10 +12,11 @@ class Footer extends StatelessComponent {
           div(classes: 'text-white sm:text-4xl', [
             const Text('GPE-Technology'),
             div(classes: 'w-fit my-4', [
-              const ButtonRounded(
+              ButtonLinkRounded(
                 title: 'Commencer',
                 backgroundColor: 'bg-white',
                 textColor: 'text-computing-primary',
+                to: AppPath.contact,
               )
             ]),
           ])

@@ -1,5 +1,6 @@
 import 'package:gpe_website/computing/components/components.dart';
 import 'package:gpe_website/computing/data/data.dart';
+import 'package:gpe_website/router.dart';
 import 'package:jaspr/jaspr.dart';
 
 @client
@@ -21,7 +22,7 @@ class ComputingHomeView extends StatelessComponent {
               const Text('Logiciel et Application sur mesure'),
             ]),
             div(classes: 'w-fit', [
-              const ButtonRounded(title: 'Contactez-nous'),
+              ButtonLinkRounded(title: 'Contactez-nous', to: AppPath.contact),
             ]),
           ],
         ),

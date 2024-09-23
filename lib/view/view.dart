@@ -1,2 +1,3 @@
 export 'about_view.dart';
 export 'home_view.dart';
+export 'contact_view.dart';

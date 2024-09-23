@@ -1,3 +1,4 @@
+import 'package:gpe_website/router.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:gpe_website/components/components.dart';
 import 'package:jaspr_router/jaspr_router.dart';
@@ -45,13 +46,13 @@ class _Item extends StatelessComponent {
   }
 }
 
-const elements = <Element>[
-  Element(title: 'Expertise'),
-  Element(title: 'Conseils'),
-  Element(title: 'Ingénierie'),
-  Element(title: 'Études'),
-  Element(title: 'Laboratoire'),
-  Element(title: 'Informatique', path: '/informatique'),
+final elements = <Element>[
+  const Element(title: 'Expertise'),
+  const Element(title: 'Conseils'),
+  const Element(title: 'Ingénierie'),
+  const Element(title: 'Études'),
+  const Element(title: 'Laboratoire'),
+  Element(title: 'Informatique', path: AppPath.computing),
 ];
 
 class Element {

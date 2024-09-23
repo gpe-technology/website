@@ -4,21 +4,37 @@ import 'package:jaspr_router/jaspr_router.dart';
 
 final router = Router(routes: [
   Route(
-    path: '/',
+    path: AppPath.root,
     title: 'Accueil',
-    name: 'gpe-home',
+    name: 'home',
     builder: (context, state) => const HomeView(),
   ),
   Route(
-    path: '/qui-sommes-nous',
+    path: AppPath.about,
     title: 'qui-sommes-nous',
-    name: 'gpe-about',
+    name: 'about',
     builder: (context, state) => const AboutView(),
   ),
+  Route(
+    path: AppPath.contact,
+    title: 'contact',
+    name: 'contact',
+    builder: (context, state) => const ContactView(),
+  ),
+
   // computing
   Route(
-    path: '/informatique',
+    path: AppPath.computing,
     name: 'computing',
     builder: (context, state) => const ComputingHomeView(),
   )
 ]);
+
+class AppPath {
+  static String get root => '/';
+  static String get about => '/qui-sommes-nous';
+  static String get contact => '/contact';
+
+  // computing
+  static String get computing => '/informatique';
+}
