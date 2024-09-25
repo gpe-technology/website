@@ -1,4 +1,5 @@
 import 'package:gpe_website/components/components.dart';
+import 'package:gpe_website/router.dart';
 import 'package:jaspr/jaspr.dart';
 
 @client
@@ -7,7 +8,7 @@ class AboutView extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield const AppHeader(path: '/qui-sommes-nous');
+    yield AppHeader(path: AppPath.about);
     yield section([]);
   }
 

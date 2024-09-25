@@ -1,3 +1,4 @@
+import 'package:gpe_website/router.dart';
 import 'package:jaspr/jaspr.dart';
 import 'package:jaspr_router/jaspr_router.dart';
 
@@ -13,11 +14,21 @@ class AppHeader extends StatelessComponent {
         child: h1(classes: 'ml-8 font-black text-xl', [text('GPE-Technology')]),
       ),
       ol(classes: 'flex justify-end h-16', [
-        _Item(title: 'Accueil', to: '/', isSelected: path == '/'),
         _Item(
-            title: 'Qui sommes-nous ?',
-            to: '#',
-            isSelected: path == '/qui-sommes-nous'),
+          title: 'Accueil',
+          to: AppPath.root,
+          isSelected: path == AppPath.root,
+        ),
+        _Item(
+          title: 'Contact',
+          to: AppPath.contact,
+          isSelected: path == AppPath.contact,
+        ),
+        _Item(
+          title: 'Qui sommes-nous ?',
+          to: '#',
+          isSelected: path == AppPath.about,
+        ),
       ])
     ]);
   }

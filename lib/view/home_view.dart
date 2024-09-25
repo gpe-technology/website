@@ -9,7 +9,7 @@ class HomeView extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield const AppHeader(path: '/');
+    yield AppHeader(path: AppPath.root);
     yield div(
       classes:
           "w-full flex justify-end items-center bg-home-image bg-cover bg-center",
