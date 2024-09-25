@@ -8,7 +8,6 @@ import 'package:gpe_website/computing/view/computing_home_view.dart' as prefix2;
 import 'package:gpe_website/view/about_view.dart' as prefix3;
 import 'package:gpe_website/view/contact_view.dart' as prefix4;
 import 'package:gpe_website/view/home_view.dart' as prefix5;
-import 'package:gpe_website/app.dart' as prefix6;
 
 /// Default [JasprOptions] for use with your jaspr project.
 ///
@@ -37,7 +36,6 @@ final defaultJasprOptions = JasprOptions(
   },
   styles: () => [
     ...prefix3.AboutView.styles,
-    ...prefix6.App.styles,
   ],
 );
 

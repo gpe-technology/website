@@ -8,9 +8,9 @@ class ContactView extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(classes: '', [
+    yield div(classes: 'flex flex-col h-full', [
       AppHeader(path: AppPath.contact),
-      div(classes: 'w-full flex justify-center', [
+      div(classes: 'w-full h-full flex justify-center', [
         ContactFrom(),
       ]),
       Footer(),

@@ -6,7 +6,7 @@ class Header extends StatelessComponent {
   const Header({super.key});
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield nav(classes: 'bg-computing-secondary py-4  sm:fixed w-full', [
+    yield nav(classes: 'bg-computing-secondary py-4 sm:fixed sm:top-0 w-full', [
       div(classes: 'flex justify-between items-center px-2 sm:mx-20', [
         h1(
             classes: 'text-white text-2xl sm:text-3xl  font-bold',

@@ -13,7 +13,7 @@ class AppHeader extends StatelessComponent {
         to: '/',
         child: h1(classes: 'ml-8 font-black text-xl', [text('GPE-Technology')]),
       ),
-      ol(classes: 'flex justify-end h-16', [
+      ol(classes: 'flex justify-end h-16 ', [
         _Item(
           title: 'Accueil',
           to: AppPath.root,
@@ -29,9 +29,11 @@ class AppHeader extends StatelessComponent {
           to: '#',
           isSelected: path == AppPath.about,
         ),
-      ])
+      ]),
     ]);
   }
+
+  showMenu() {}
 }
 
 class _Item extends StatelessComponent {
@@ -48,7 +50,8 @@ class _Item extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield li(
       classes:
-          'border-b-4  ${_isSelected ? 'border-secondary ' : 'border-transparent'} hover:text-secondary mr-10',
+          'border-b-4  ${_isSelected ? 'border-secondary ' : 'border-transparent'}'
+          'hover:text-secondary mr-10',
       [
         div(
             classes: 'h-full flex items-center',

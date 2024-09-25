@@ -9,7 +9,7 @@ class ComputingHomeView extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     final homeData = HomeData.fromJson(homeContentListData);
-    yield div(classes: 'w-full', [
+    yield div(classes: 'w-full h-full', [
       const Header(),
       div(classes: 'my-10 mx-4 sm:mx-20', [
         div(

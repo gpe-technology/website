@@ -6,13 +6,6 @@ class App extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(classes: 'main', [router]);
+    yield div(classes: 'h-screen w-screen', [router]);
   }
-
-  @css
-  static final styles = [
-    css('.main', [
-      css('&').box(height: 100.vh).flexbox(direction: FlexDirection.column),
-    ]),
-  ];
 }

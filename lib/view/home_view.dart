@@ -9,21 +9,21 @@ class HomeView extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield AppHeader(path: AppPath.root);
-    yield div(
-      classes:
-          "w-full flex justify-end items-center bg-home-image bg-cover bg-center",
-      [
-        div(classes: 'h-[calc(100vh-64px)] flex items-center', [
+    yield div(classes: 'flex flex-col h-full', [
+      AppHeader(path: AppPath.root),
+      div(
+        classes:
+            "h-full flex justify-center sm:justify-end items-center bg-home-image bg-cover bg-center",
+        [
           div(classes: 'grid grid-cols-2 gap-8 m-10', [
             ...elements.map((element) {
               return _Item(element: element);
             })
           ]),
-        ]),
-      ],
-    );
-    yield Footer();
+        ],
+      ),
+      Footer(),
+    ]);
   }
 }
 
