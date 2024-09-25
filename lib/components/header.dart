@@ -11,7 +11,8 @@ class AppHeader extends StatelessComponent {
     yield nav(classes: 'flex justify-between items-center bg-primary', [
       Link(
         to: '/',
-        child: h1(classes: 'ml-8 font-black text-xl', [text('GPE-Technology')]),
+        child:
+            h1(classes: 'ml-8 font-black sm:text-xl', [text('GPE-Technology')]),
       ),
       ol(classes: 'flex justify-end h-16 ', [
         _Item(
@@ -23,11 +24,6 @@ class AppHeader extends StatelessComponent {
           title: 'Contact',
           to: AppPath.contact,
           isSelected: path == AppPath.contact,
-        ),
-        _Item(
-          title: 'Qui sommes-nous ?',
-          to: '#',
-          isSelected: path == AppPath.about,
         ),
       ]),
     ]);

@@ -8,13 +8,11 @@ class ContactView extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(classes: 'flex flex-col h-full', [
-      AppHeader(path: AppPath.contact),
-      div(classes: 'w-full h-full flex justify-center', [
-        ContactFrom(),
-      ]),
-      Footer(),
+    yield AppHeader(path: AppPath.contact);
+    yield div(classes: 'h-[calc(100vh-128px)] overflow-auto', [
+      ContactFrom(),
     ]);
+    yield Footer();
   }
 }
 
@@ -22,7 +20,7 @@ class ContactFrom extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield form(
-      classes: 'w-full mx-4 sm:mx-20 pt-20',
+      classes: 'mx-4 py-4 sm:mx-20 sm:pt-20',
       method: FormMethod.post,
       [
         div(classes: 'grid grid-cols-1 sm:grid-cols-2 gap-4', [
