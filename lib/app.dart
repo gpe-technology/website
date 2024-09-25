@@ -6,6 +6,6 @@ class App extends StatelessComponent {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield div(classes: 'h-screen w-screen', [router]);
+    yield div(classes: 'h-screen', [router]);
   }
 }
